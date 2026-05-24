@@ -18,15 +18,15 @@ def contar_titulos(matriz, umbral_calificacion, anio_limite):
     conteo = 0
     for pelicula in matriz:
         titulo      = pelicula[0]
-        anio        = pelicula[1]
+        año        = pelicula[1]
         calificacion = pelicula[2]
-        if calificacion >= umbral_calificacion and anio >= anio_limite:
+        if calificacion >= umbral_calificacion and año >= anio_limite:
             conteo += 1
     return conteo
 
 # Parametros de busqueda
 UMBRAL_CALIFICACION = 7.5
-ANIO_LIMITE         = 2022
+AÑO_LIMITE         = 2022
 
 # Salida 
 print("=" * 45)
@@ -34,10 +34,10 @@ print("         VIDEOTECA DIGITAL")
 print("=" * 45)
 print(f"  Criterios aplicados:")
 print(f"  - Calificación >= {UMBRAL_CALIFICACION}")
-print(f"  - Año de lanzamiento >= {ANIO_LIMITE}")
+print(f"  - Año de lanzamiento >= {AÑO_LIMITE}")
 print("=" * 45)
 
-resultado = contar_titulos(videoteca, UMBRAL_CALIFICACION, ANIO_LIMITE)
+resultado = contar_titulos(videoteca, UMBRAL_CALIFICACION, AÑO_LIMITE)
 
 print(f"\n  Total de títulos populares y recientes: {resultado}")
 print("\n" + "=" * 45)
