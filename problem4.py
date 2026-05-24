@@ -14,13 +14,13 @@ videoteca = [
 ]
 
 # Contar títulos que cumplen criterios
-def contar_titulos(matriz, umbral_calificacion, anio_limite):
+def contar_titulos(matriz, umbral_calificacion, año_limite):
     conteo = 0
     for pelicula in matriz:
         titulo      = pelicula[0]
         año        = pelicula[1]
         calificacion = pelicula[2]
-        if calificacion >= umbral_calificacion and año >= anio_limite:
+        if calificacion >= umbral_calificacion and año >= año_limite:
             conteo += 1
     return conteo
 
